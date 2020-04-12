@@ -2,6 +2,7 @@ package com.example.crudapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,6 +26,9 @@ public class DetailsUser extends AppCompatActivity {
         onClick();
     }
 
+/*    Initialization Views Method, it's role:
+ *            * Invoke all views of Details Activity and Initialization it.
+ */
     private void initialization() {
         mtvDetails = findViewById(R.id.txtvDetails);
         mbtnLogout = findViewById(R.id.btnLogout);
@@ -33,6 +37,11 @@ public class DetailsUser extends AppCompatActivity {
 
     }
 
+    /*    A method to Do the following:
+     *                   * set Text in to TextView,
+     *                   * Action when user press on Logout Button
+     */
+    @SuppressLint("SetTextI18n")
     private void onClick() {
         mtvDetails.setText(" Hello : " + sharedPreferences.getString("username",null) + "\n User Password Is : " + sharedPreferences.getString("password",null));
         mbtnLogout.setOnClickListener(new View.OnClickListener() {
