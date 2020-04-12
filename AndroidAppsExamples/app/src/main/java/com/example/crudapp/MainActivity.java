@@ -1,3 +1,4 @@
+/* Hussein Mohammed Hussein | 12/4/2020 */
 package com.example.crudapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         onClick();
     }
 
-//    Initialization Views Method
+/*    Initialization Views Method, it's role:
+ *            * Invoke all views of Details Activity and Initialization it.
+ */
     private void initialization() {
         metUsername = findViewById(R.id.etUsername);
         metPassword = findViewById(R.id.etPassword);
@@ -41,7 +44,12 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(MainActivity.this, DetailsUser.class);
     }
 
-//    Button onClick Method
+
+/*    A onClick method to Do the following:
+ *                   * Validation on TextInputEditText.
+ *                   * Show Error with TextInputLayout.
+ *                   * each all is execution when user press Login Button.
+ */
     private void onClick() {
         mbtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
